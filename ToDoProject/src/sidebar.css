@@ -1,0 +1,45 @@
+
+h2{
+  font-family: 'Poppins', sans-serif;
+}
+.leftwindow{
+  z-index: 2;
+  position: absolute;
+  padding: 38px;
+  height: 100vh;
+  width: 20vw;
+  overflow-y: auto;
+  background-color: #BAD7F2;
+  outline-style: solid;
+  outline-color: #83a4c467;
+  left: -18vw;
+  top: 0;
+  transition: left 1s;
+ 
+}
+.leftwindow:hover{
+  left: 0;
+}
+
+.leftwindow li{
+  list-style: none;
+}
+
+.leftwindow .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2BAC9;
+  border-radius: 100px;
+  float: right;
+  height: 30px;
+  width: 30px;
+  outline-style: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.leftwindow textarea{
+  width: 15vw;
+  resize: vertical;
+  margin-top: 30px;
+}

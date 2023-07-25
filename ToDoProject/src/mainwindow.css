@@ -1,0 +1,9 @@
+.mainwindow{
+    outline-style: solid;
+    margin: 50px 250px 0px 250px;
+    height: 88vh;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #BAF2BB;
+    outline-color: #87ad88ab;
+}
