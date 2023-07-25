@@ -1,0 +1,36 @@
+.task{
+    display: flex;
+    align-items: center;
+    outline-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.desc{
+    margin-left: auto;
+    max-width: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.priority{
+    margin-left: auto;
+}.project{
+    margin-left: auto;
+}
+.date{
+    margin-left: auto;
+}
+
+
+
+@media  (max-width: 600px)  {
+    .priority{
+        display: none;
+    }.project{
+        display: none;
+    }
+    .desc{
+        margin-right: auto;
+        margin-left: 10px;
+    }
+}

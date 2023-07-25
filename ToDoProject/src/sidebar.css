@@ -5,14 +5,14 @@ h2{
 .leftwindow{
   z-index: 2;
   position: absolute;
-  padding: 38px;
+  padding: 20px;
   height: 100vh;
-  width: 20vw;
+  width: 350px;
   overflow-y: auto;
   background-color: #BAD7F2;
   outline-style: solid;
   outline-color: #83a4c467;
-  left: -18vw;
+  left: -330px;
   top: 0;
   transition: left 1s;
  
@@ -39,7 +39,7 @@ h2{
   font-size: 20px;
 }
 .leftwindow textarea{
-  width: 15vw;
+  width: 250px;
   resize: vertical;
   margin-top: 30px;
 }
