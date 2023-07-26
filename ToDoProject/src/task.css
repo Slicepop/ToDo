@@ -4,15 +4,21 @@
     outline-style: solid;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 .desc{
     margin-left: auto;
-    max-width: 30vw;
+    max-width: 25vw;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow:ellipsis;
+}
+.title{
+    width: 150px;
+    overflow:hidden;
     text-overflow: ellipsis;
 }
-
 .priority{
     margin-left: auto;
 }.project{
@@ -21,7 +27,6 @@
 .date{
     margin-left: auto;
 }
-
 
 
 @media  (max-width: 600px)  {

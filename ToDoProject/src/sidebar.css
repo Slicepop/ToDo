@@ -24,7 +24,10 @@ h2{
 .leftwindow li{
   list-style: none;
 }
+.dates{
+  color: #757575;
 
+}
 .leftwindow .button{
   display: flex;
   justify-content: center;

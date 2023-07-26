@@ -1,9 +1,9 @@
 import './/task.css'
+
 export default function Task(props){
     function openpop(){
-        return(
-            console.log('popup opened')
-        )
+        const openedTask = document.getElementById('popup')
+        openedTask.style.zIndex = '1'
     }
     return (
         <div className="task" onClick={openpop}>

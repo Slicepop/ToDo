@@ -7,10 +7,10 @@ import Mainwindow from '/src/Mainwindow'
     Make rightwindow that has 
       filters ie. priority and prejects
       search function
-    Make task.jsx
+    Make task.jsx       X
       make it cache look at june dasilva's notes for inspo
     Export/import functions
-    Add header
+    Add footer
 */
 
 
@@ -19,7 +19,6 @@ export default function App(){
   return (
     <>
       <Mainwindow />
-
     </>
   )
 }

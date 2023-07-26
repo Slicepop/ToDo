@@ -6,4 +6,5 @@
     padding: 30px;
     background-color: #BAF2BB;
     outline-color: #87ad88ab;
+    overflow: auto;
 }

@@ -15,7 +15,7 @@ export default function Sidebar(props){
                 'title': title,
                 'description': desc,
                 'project': 'Default',
-                'priority': 'hasdigh',
+                'priority': 'High',
                 'date': date
 
         }])
@@ -32,7 +32,7 @@ export default function Sidebar(props){
                 value={desc}
                 onChange={t => setDesc(t.target.value)}
                 /></li>
-                <li><input type="date" name="" className='date' 
+                <li><input type="date" name="" className='dates' 
                 value={date}
                 onChange={t => setDate(t.target.value)}
                 /></li>
