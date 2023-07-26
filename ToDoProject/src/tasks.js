@@ -1,11 +1,11 @@
 export default {
     'Task':[
         {
-            'title': 'test',
-            'description': 'test description',
-            'project': 'default',
-            'priority': 'high',
-            'date': '7/25/2023'
+            'title': 'Title',
+            'description': 'Description',
+            'project': 'Project',
+            'priority': 'Priority',
+            'date': 'Date'
         }
     ]
 }

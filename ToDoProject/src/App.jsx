@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './index.css'
 import Mainwindow from '/src/Mainwindow'
-import Sidebar from './Sidebar'
 
 /*
   Sprints
@@ -19,7 +18,6 @@ import Sidebar from './Sidebar'
 export default function App(){
   return (
     <>
-      <Sidebar/>
       <Mainwindow />
 
     </>
