@@ -40,7 +40,7 @@ export default function Popup(props) {
                         <p>Project: {props.item.project}</p>
                         <p>Date: {props.item.date}</p>
                     </div>
-                    <textarea readOnly className='window--desc'>{props.item.description}</textarea>
+                    <textarea readOnly={isEdit ? false : true} className='window--desc'>{props.item.description}</textarea>
                     <p className='window--priority'>Priority: {props.item.priority}</p>
                 </div>
             </div >
