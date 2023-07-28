@@ -1,9 +1,9 @@
-*{
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    background-color: #F2E2BA;
-    font-family: 'Poppins', sans-serif;
-    overflow: none;
-  }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #f2e2ba;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}

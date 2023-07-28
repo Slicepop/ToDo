@@ -1,38 +1,35 @@
-
-h2{
-  font-family: 'Poppins', sans-serif;
+h2 {
+  font-family: "Poppins", sans-serif;
 }
-.leftwindow{
+.leftwindow {
   z-index: 2;
   position: absolute;
   padding: 20px;
   height: 100vh;
   width: 350px;
   overflow-y: auto;
-  background-color: #BAD7F2;
+  background-color: #bad7f2;
   outline-style: solid;
   outline-color: #83a4c467;
   left: -330px;
   top: 0;
   transition: left 1s;
- 
 }
-.leftwindow:hover{
+.leftwindow:hover {
   left: 0;
 }
 
-.leftwindow li{
+.leftwindow li {
   list-style: none;
 }
-.dates{
+.dates {
   color: #757575;
-
 }
-.leftwindow .button{
+.leftwindow .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F2BAC9;
+  background-color: #f2bac9;
   border-radius: 100px;
   float: right;
   height: 30px;
@@ -41,8 +38,37 @@ h2{
   cursor: pointer;
   font-size: 20px;
 }
-.leftwindow textarea{
+.leftwindow textarea {
+  background-color: whitesmoke;
   width: 250px;
   resize: vertical;
   margin-top: 30px;
+}
+
+.rightwindow {
+  z-index: 2;
+  position: absolute;
+  padding: 20px;
+  height: 100vh;
+  width: 350px;
+  overflow-y: auto;
+  background-color: #f2bac9;
+  outline-style: solid;
+  outline-color: #c0627b6c;
+  right: -330px;
+  top: 0;
+  transition: right 1s;
+}
+.rightwindow:hover {
+  right: 0;
+}
+
+.search {
+  display: flex;
+}
+.search img {
+  cursor: pointer;
+  width: 25px;
+  height: auto;
+  margin-left: 10px;
 }

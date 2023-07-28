@@ -1,10 +1,34 @@
-.mainwindow{
-    outline-style: solid;
-    margin: 50px 5vw 0px 5vw;
-    height: 88vh;
-    border-radius: 30px;
-    padding: 30px;
-    background-color: #BAF2BB;
-    outline-color: #87ad88ab;
-    overflow: auto;
+.mainwindow {
+  outline-style: solid;
+  margin: 50px 5vw 50px 5vw;
+  height: 88vh;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #baf2bb;
+  outline-color: #87ad88ab;
+  overflow-y: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  max-height: 10px;
+  min-height: 1px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #2be5f200;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f2bacf;
+  border-radius: 100px;
+}
+.app {
+  margin-top: -5px;
+  padding: 10px;
+  width: auto;
+  height: 86.1vh;
+  overflow-y: auto;
 }
