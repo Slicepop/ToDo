@@ -46,7 +46,7 @@ h2 {
 }
 
 .rightwindow {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   padding: 20px;
   height: 100vh;

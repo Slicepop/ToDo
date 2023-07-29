@@ -4,17 +4,11 @@ import Draggable from 'react-draggable'
 
 export default function Popup(props) {
 
-
+    var tempArr = []
     // const [title, setTitle] = useState(props.item.title)
     function handleClose() {
-        // props.setPopupState(prevState => [...prevState, {
-        // props.setPopupState(prevState => {
-        prevState.map(item => {
-            if (props.item.length === item.length) {
-                console.log(props.item.title)
-            }
-        })
-        //})
+        // props.setPopupState(prevState => prevState.filter(el => el.title == props.title))
+        props.popupVariable(false)
     }
     const [isEdit, setIsEdit] = useState(false)
     function handleEdit() {
@@ -26,7 +20,7 @@ export default function Popup(props) {
     }
 
     return (
-        <Draggable>
+        <Draggable allowAnyClick={true} handle='.banner' defaultClassName='draggable'>
 
             <div className='popup' id='popup' >
                 <div style={{ backgroundColor: isEdit ? '#bad7f2' : '#baf2d8' }} className='window'>
@@ -44,6 +38,6 @@ export default function Popup(props) {
                     <p className='window--priority'>Priority: {props.item.priority}</p>
                 </div>
             </div >
-        </Draggable >
+        </ Draggable >
     )
 }

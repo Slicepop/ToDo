@@ -1,11 +1,9 @@
-draggable {
+.draggable {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 100vh;
-  z-index: 3;
+  z-index: 1x;
 }
 .banner {
   position: absolute;

@@ -8,29 +8,32 @@ export default function Sidebar(props) {
     const [date, setDate] = useState('')
     const [project, setProject] = useState('')
     const [priority, setPriority] = useState('')
+    var count = tasks.Task.length - 1
 
     function addtask() {
 
         props.setThings(prevState => [...prevState,
         {
+            'id': ++count,
             'title': title,
             'description': desc,
             'project': 'Default',
             'priority': 'High',
             'date': date
 
-        }])
-
+        }
+        ])
+        console.log(props.things)
     }
     return (
         <div className="leftwindow" >
             <li><div className='button' onClick={addtask}> + </div></li>
-            <li><textarea placeholder='title'
+            <li><textarea placeholder='Title'
                 name="" className='title'
                 value={title}
                 onChange={t => setTitle(t.target.value)}
             /></li>
-            <li><textarea placeholder='description' name="" className='description'
+            <li><textarea placeholder='Description' name="" className='description'
                 value={desc}
                 onChange={t => setDesc(t.target.value)}
             /></li>
