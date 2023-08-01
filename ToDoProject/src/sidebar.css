@@ -29,6 +29,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* 
+  background-color: #f3aec1;
+  outline-style: solid;
+  outline-color: #c0627b88; */
   background-color: #f2bac9;
   border-radius: 100px;
   float: right;

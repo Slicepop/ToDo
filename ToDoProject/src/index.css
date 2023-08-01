@@ -3,7 +3,8 @@
 }
 body {
   margin: 0;
-  background-color: #f2e2ba;
+  /* Old value: f5d0e8 */
+  background-color: #f5d1ec;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
 }

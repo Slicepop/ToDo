@@ -23,7 +23,7 @@ export default function Sidebar(props) {
 
         }
         ])
-        console.log(props.things)
+        localStorage.setItem("tasks", JSON.stringify(props.things));
     }
     return (
         <div className="leftwindow" >

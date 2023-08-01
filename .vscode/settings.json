@@ -1,6 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "off",
   "editor.cursorStyle": "line",
   "editor.wordWrap": "on",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,

@@ -11,6 +11,7 @@ export default function Popup(props) {
         props.popupVariable(false)
     }
     const [isEdit, setIsEdit] = useState(false)
+    const [date, setDate] = useState(props.item.date)
     function handleEdit() {
         if (isEdit) {
             setIsEdit(false);
@@ -20,21 +21,40 @@ export default function Popup(props) {
     }
 
     return (
-        <Draggable allowAnyClick={true} handle='.banner' defaultClassName='draggable'>
+        <Draggable allowAnyClick={true} handle='.banner' cancel='.popupTitle' defaultClassName='draggable'>
 
             <div className='popup' id='popup' >
                 <div style={{ backgroundColor: isEdit ? '#bad7f2' : '#baf2d8' }} className='window'>
                     <div className="banner" id='banner' >
-                        <h1>{props.item.title}</h1>
+                        <h1 className='popupTitle' placeholder='Title' contentEditable={isEdit ? true : false}>{props.item.title}</h1>
                         <img className='editIcon' onClick={handleEdit}
                             src={isEdit ? './save.png' : "./edit.png"} alt="" />
                         <img src=".//xIcon.png" alt="close" className='closeIcon' onClick={handleClose} />
                     </div>
                     <div className="top">
-                        <p>Project: {props.item.project}</p>
-                        <p>Date: {props.item.date}</p>
+                        <div className="projectText">
+                            <p>Project:</p>
+                            <p contentEditable={isEdit ? true : false}>{props.item.project}</p>
+
+                        </div>
+
+
+                        {
+
+                            isEdit ?
+                                <input className='popup--Date' type="date" value={date} onChange={date => setDate(date.target.value)} /> :
+                                <p>Date: {date}</p>
+                        }
+
+
+
+
+
+
+
                     </div>
-                    <textarea readOnly={isEdit ? false : true} className='window--desc'>{props.item.description}</textarea>
+                    <textarea readOnly={isEdit ? false : true} style={{ color: isEdit ? 'black' : '#8c8684' }}
+                        className='window--desc'>{props.item.description}</textarea>
                     <p className='window--priority'>Priority: {props.item.priority}</p>
                 </div>
             </div >

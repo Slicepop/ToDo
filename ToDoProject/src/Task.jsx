@@ -17,7 +17,7 @@ export default function Task(props) {
                 <p className='priority'>Priority: {props.task.priority}</p>
                 <p className='date'>{props.task.date}</p>
             </div>
-            {popupVariable ? <Popup popupVariable={setPopupVariable} item={props.task} /> : ''}
+            {popupVariable ? <Popup popupVariable={setPopupVariable} item={props.task} setThings={props.setThings} /> : ''}
         </>
     )
 }   

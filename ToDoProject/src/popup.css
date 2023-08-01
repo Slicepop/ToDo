@@ -66,13 +66,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.popupTitle {
+  cursor: text;
+  max-width: 500px;
+}
 .top {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-
+.popup--Date {
+  border-radius: 20px;
+  padding: 5px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: whitesmoke;
+}
 .window--desc {
   width: 90%;
   background-color: whitesmoke;
@@ -83,8 +93,10 @@
   overflow: auto;
   outline-style: solid;
   outline-color: #f2bac9ab;
-  color: #8c8684;
   padding: 20px;
+}
+.projectText {
+  display: flex;
 }
 .window--priority {
   position: absolute;
