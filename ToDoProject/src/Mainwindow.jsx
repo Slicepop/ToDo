@@ -10,10 +10,11 @@ import Test from './Test'
 export default function Mainwindow() {
 
     const [things, setThings] = useState(tasks.Task)
-    var list = things.map(item => <Task key={item.description + item.title + item.date} task={item} setThings={setThings} />)
+    const [taskCount, setTaskCount] = useState(things.length)
+    var list = things.map(item => <Task key={item.id} task={item} setThings={setThings} />)
     return (
         <>
-            <Sidebar things={things} setThings={setThings} />
+            <Sidebar taskCount={taskCount} setTaskCount={setTaskCount} things={things} setThings={setThings} />
 
             <Filter setThings={setThings} things={things} />
             <div className='mainwindow' id='mainwindow' >
