@@ -4,22 +4,32 @@ import Popup from './Popup'
 
 export default function Task(props) {
     const [popupVariable, setPopupVariable] = useState(false)
+    const [checkboxState, seCheckboxState] = useState(false)
     function openPopup(event) {
-        if (event.target.id !== 'Done?') {
-
+        if (event.target.id !== 'check') {
             setPopupVariable(true)
         }
 
     }
     /**TODO:
- * Make the checkbox remove the task (ask first)
+ * Make the checkbox remove the task 
+ *      (ask first) with undo if no
  *      Needs to have a transition
  *      
  */
+
+    function handleClick() {
+        var response = confirm("You are about to remove this task")
+        if (response) {
+        } else {
+
+        }
+    }
     return (
         <>
             <div className="task" onClick={event => openPopup(event)}>
-                <input type="checkbox" name="Done?" id="Done?" />
+                <img src='check.png' alt="Checkmark" id='check'
+                    onClick={handleClick} />
                 <h5 className='title'>{props.task.title}</h5>
                 <p className='desc'>{props.task.description}</p>
                 <p className='project'>Project: {props.task.project}</p>

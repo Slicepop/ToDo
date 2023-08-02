@@ -17,6 +17,22 @@
   box-shadow: 0px 2.982561px 10.4564px #c0627b;
   outline-color: #f2bac9af;
   background-color: #dececf;
+  cursor: pointer;
+}
+.task #check {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  outline-style: solid;
+  border-radius: 100px;
+  padding: 10px;
+  transition: 0.35s ease;
+  outline-color: rgba(0, 0, 0, 0.178);
+}
+.task #check:hover {
+  outline-color: rgba(0, 0, 0, 0.575);
+  background-color: #f2bac9;
+  padding: 2.25px;
 }
 
 .desc {

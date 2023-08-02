@@ -97,6 +97,15 @@
 .projectText {
   display: flex;
 }
+.window--mode {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 35px;
+  font-size: larger;
+  color: rgba(0, 0, 0, 0.301);
+}
+
 .window--priority {
   position: absolute;
   bottom: 0;

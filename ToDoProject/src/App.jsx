@@ -5,17 +5,21 @@ import Mainwindow from '/src/Mainwindow'
 /*
   TODO:
 
-    Add checkmark to delete task when complete
-    Add project and priority options on the add task sidebar
-    Maybe add a <p> at the bottom left that specifies if the popup is in edit mode
+    Add checkmark to delete task when complete 
+      Ask with a popup "Are you sure you want to finish this task?"
+
+    Add project and priority options on the add task sidebar 
+✔  Maybe add a <p> at the bottom left that specifies if the popup is in    edit mode  
     
     Filter capabilities:
       filter by search
       filter by project
       filter by priority
 
-    Figure out local storage
 
+    ✔ Figure out local storage
+          Only saves as tab is being closed
+          Is this the best way to do it?
 
   FIXME:
 

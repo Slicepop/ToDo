@@ -16,11 +16,10 @@ export default function Popup(props) {
         if (isEdit) {
             // If in edit mode:
 
-            /*
-                TODO:
-                    Save edits into the array in mainwindow
-
-            */
+            /**
+             * TODO:
+             * Save edits into the array in mainwindow
+             */
             setIsEdit(false);
         } else {
             // If in preview mode:
@@ -48,10 +47,7 @@ export default function Popup(props) {
                             <p contentEditable={isEdit ? true : false}>{props.item.project}</p>
 
                         </div>
-
-
                         {
-
                             isEdit ?
                                 <input className='popup--Date' type="date" value={date} onChange={date => setDate(date.target.value)} /> :
                                 <p>Date: {date}</p>
@@ -59,6 +55,7 @@ export default function Popup(props) {
 
                     </div>
                     <textarea readOnly={isEdit ? false : true} style={{ color: isEdit ? 'black' : '#8c8684' }} className='window--desc' defaultValue={props.item.description} ></textarea>
+                    <p className='window--mode'>{isEdit ? 'Edit' : 'Preview'}</p>
                     <p className='window--priority'>Priority: {props.item.priority}</p>
                 </div>
             </div >

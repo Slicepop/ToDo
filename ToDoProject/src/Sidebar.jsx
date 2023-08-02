@@ -1,6 +1,4 @@
 import './sidebar.css'
-import tasks from './/tasks.js'
-import Task from './Task'
 import { useState } from 'react'
 export default function Sidebar(props) {
     const [title, setTitle] = useState('')
@@ -12,21 +10,17 @@ export default function Sidebar(props) {
     const [date, setDate] = useState(formattedDate)
     const [project, setProject] = useState('')
     const [priority, setPriority] = useState('Low')
-    var count = tasks.Task.length - 1
 
+    /**
+     * TODO:
+     * Make it so the user can make new projects and have them update to the options
+     */
 
-
-    /* TODO:
-        
-        make it so the user can make new projects and have them update to the options
-        
-    */
     var projects
 
     function addtask() {
-        if (title == '') {
-
-        } else {
+        if (title !== '') {
+            // If the title has a name then clear the options to default
             setTitle('')
             setDesc('')
             setDate(formattedDate)
@@ -41,9 +35,7 @@ export default function Sidebar(props) {
                 'priority': priority,
                 'date': date
 
-            }
-            ])
-            localStorage.setItem("tasks", JSON.stringify(props.things));
+            }])
 
         }
     }
