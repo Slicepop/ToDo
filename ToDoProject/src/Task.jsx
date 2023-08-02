@@ -14,15 +14,16 @@ export default function Task(props) {
     /**TODO:
  * Make the checkbox remove the task 
  *      (ask first) with undo if no
- *      Needs to have a transition
+ *   ✔  Needs to have a transition
  *      
  */
 
     function handleClick() {
         var response = confirm("You are about to remove this task")
         if (response) {
+            // Remove task
         } else {
-
+            // Do nothing (maybe)
         }
     }
     return (
@@ -36,7 +37,7 @@ export default function Task(props) {
                 <p className='priority'>Priority: {props.task.priority}</p>
                 <p className='date'>{props.task.date}</p>
             </div>
-            {popupVariable ? <Popup description={props.task.description} popupVariable={setPopupVariable} item={props.task} setThings={props.setThings} /> : ''}
+            {popupVariable ? <Popup description={props.task.description} popupVariable={setPopupVariable} item={props.task} things={props.things} setThings={props.setThings} /> : ''}
         </>
     )
 }   

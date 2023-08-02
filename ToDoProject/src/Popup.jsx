@@ -3,9 +3,9 @@ import './popup.css'
 import Draggable from 'react-draggable'
 
 export default function Popup(props) {
+    //<Task key={item.id} task={item} things={things} setThings={setThings} />
 
-    var tempArr = []
-    // const [title, setTitle] = useState(props.item.title)
+
     function handleClose() {
         // props.setPopupState(prevState => prevState.filter(el => el.title == props.title))
         props.popupVariable(false)
@@ -13,16 +13,37 @@ export default function Popup(props) {
     const [isEdit, setIsEdit] = useState(false)
     const [date, setDate] = useState(props.item.date)
     function handleEdit() {
-        if (isEdit) {
-            // If in edit mode:
+        /**
+         * TODO:
+         * Save edits into things state
+         */
 
-            /**
-             * TODO:
-             * Save edits into the array in mainwindow
-             */
+
+        /**
+         * TODO:
+         * 
+         * get current value of all of the inputs in the popup and set them to the object below
+         */
+        if (isEdit) {
+            // If in edit mode currently:
+            const newState = props.things.map(item => {
+                if (item.id == props.item.id) {
+                    return {
+                        ...item,
+                        title: 'test',
+                        description: 'test',
+                        date: 'test',
+                        project: 'test',
+                        priority: 'test'
+                    };
+                }
+                return item;
+            })
+            props.setThings(newState)
+
             setIsEdit(false);
         } else {
-            // If in preview mode:
+            // If in preview mode currently:
             setIsEdit(true);
         }
     }

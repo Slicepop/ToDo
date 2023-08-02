@@ -2,9 +2,7 @@ import './mainwindow.css'
 import Task from './/Task'
 import { useState } from 'react'
 import Sidebar from './Sidebar'
-import Popup from './Popup'
 import Filter from './Filter'
-import Test from './Test'
 
 export default function Mainwindow() {
     var Tasks = [
@@ -36,7 +34,7 @@ export default function Mainwindow() {
 
     // This taskCount state is used to add id to each task so there is a key
     const [taskCount, setTaskCount] = useState(things.length)
-    var list = things.map(item => <Task key={item.id} task={item} setThings={setThings} />)
+    var list = things.map(item => <Task key={item.id} task={item} things={things} setThings={setThings} />)
     return (
         <>
             <Sidebar taskCount={taskCount} setTaskCount={setTaskCount} things={things} setThings={setThings} />
