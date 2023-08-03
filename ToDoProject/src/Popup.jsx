@@ -11,30 +11,35 @@ export default function Popup(props) {
         props.popupVariable(false)
     }
     const [isEdit, setIsEdit] = useState(false)
+    var title = props.item.title
+    const [description, setDescription] = useState(props.item.description)
+    var project = props.item.project
+    var priority = props.item.priority
     const [date, setDate] = useState(props.item.date)
+
+
+
+    function handleInput(e) {
+        // (e.target.value)3
+    }
+    function reverseString(str) {
+        if (str === "")
+            return "";
+        else
+            return reverseString(str.substr(1)) + str.charAt(0);
+    }
     function handleEdit() {
-        /**
-         * TODO:
-         * Save edits into things state
-         */
-
-
-        /**
-         * TODO:
-         * 
-         * get current value of all of the inputs in the popup and set them to the object below
-         */
         if (isEdit) {
             // If in edit mode currently:
             const newState = props.things.map(item => {
                 if (item.id == props.item.id) {
                     return {
                         ...item,
-                        title: 'test',
-                        description: 'test',
-                        date: 'test',
-                        project: 'test',
-                        priority: 'test'
+                        title: title,
+                        description: description,
+                        date: date,
+                        project: project,
+                        priority: priority
                     };
                 }
                 return item;
@@ -47,6 +52,7 @@ export default function Popup(props) {
             setIsEdit(true);
         }
     }
+    // TODO: Project needs to be a drop down but for now it is just text
 
     return (
         <Draggable allowAnyClick={true} handle='.banner' cancel='.popupTitle' defaultClassName='draggable'>
@@ -55,7 +61,18 @@ export default function Popup(props) {
                 <div style={{ backgroundColor: isEdit ? '#bad7f2' : '#baf2d8' }} className='window'>
                     <div className="banner" id='banner' >
 
-                        <h1 className='popupTitle' placeholder='Title' contentEditable={isEdit ? true : false} style={{ cursor: isEdit ? 'text' : 'move', pointerEvents: isEdit ? 'all' : 'none' }}> {props.item.title}</h1>
+                        <h1
+                            className='popupTitle'
+                            placeholder='Title'
+                            contentEditable={isEdit ? true : false}
+                            suppressContentEditableWarning={true}
+                            defaultValue={title}
+                            onInput={(e) => {
+                                title = e.currentTarget.textContent
+                            }}
+
+                            style={{ cursor: isEdit ? 'text' : 'move', pointerEvents: isEdit ? 'all' : 'none' }}
+                        >{title}</h1>
 
                         <img className='editIcon' onClick={handleEdit}
                             src={isEdit ? './save.png' : "./edit.png"} alt="" />
@@ -64,19 +81,39 @@ export default function Popup(props) {
                     </div>
                     <div className="top">
                         <div className="projectText">
+
                             <p>Project:</p>
-                            <p contentEditable={isEdit ? true : false}>{props.item.project}</p>
+                            <p
+                                suppressContentEditableWarning={true}
+
+                                contentEditable={isEdit ? true : false}
+                                onInput={(e) => {
+                                    project = e.currentTarget.textContent
+                                }}
+                            >{project}</p>
 
                         </div>
                         {
                             isEdit ?
-                                <input className='popup--Date' type="date" value={date} onChange={date => setDate(date.target.value)} /> :
+                                <input
+                                    className='popup--Date'
+                                    type="date"
+                                    value={date}
+                                    onChange={date => setDate(date.target.value)}
+                                /> :
                                 <p>Date: {date}</p>
                         }
 
                     </div>
-                    <textarea readOnly={isEdit ? false : true} style={{ color: isEdit ? 'black' : '#8c8684' }} className='window--desc' defaultValue={props.item.description} ></textarea>
-                    <p className='window--mode'>{isEdit ? 'Edit' : 'Preview'}</p>
+                    <textarea
+                        readOnly={isEdit ? false : true}
+                        style={{ color: isEdit ? 'black' : '#8c8684' }}
+                        className='window--desc'
+                        defaultValue={description}
+                        onChange={text => setDescription(text.target.value)}
+                    ></textarea>
+
+                    <p className='window--mode'>{isEdit ? 'Edit Mode' : ''}</p>
                     <p className='window--priority'>Priority: {props.item.priority}</p>
                 </div>
             </div >

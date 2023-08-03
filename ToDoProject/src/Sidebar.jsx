@@ -16,7 +16,6 @@ export default function Sidebar(props) {
      * Make it so the user can make new projects and have them update to the options
      */
 
-    var projects
 
     function addtask() {
         if (title !== '') {
@@ -25,13 +24,14 @@ export default function Sidebar(props) {
             setDesc('')
             setDate(formattedDate)
             setPriority('Low')
+            setProject('')
             props.setTaskCount(prevState => prevState + 1)
             props.setThings(prevState => [...prevState,
             {
                 'id': props.taskCount,
                 'title': title,
                 'description': desc,
-                'project': 'Default',
+                'project': project,
                 'priority': priority,
                 'date': date
 
@@ -51,14 +51,11 @@ export default function Sidebar(props) {
                 value={desc}
                 onChange={t => setDesc(t.target.value)}
             /></li>
+            <li><input placeholder='Project' name="project" id="project" value={project} onChange={text => setProject(text.target.value)} /></li>
             <li><input type="date" name="" className='dates'
                 value={date}
                 onChange={t => setDate(t.target.value)}
-            /></li>
-
-            <li><p>Project: <select name="project" id="project">
-                {projects}
-            </select></p>
+            />
             </li>
             <li><p>Priority: <select name="priority" id="priority" value={priority} onChange={select => setPriority(select.target.value)}>
                 <option value="Low" >Low</option>

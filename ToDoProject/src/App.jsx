@@ -23,7 +23,7 @@ import Mainwindow from '/src/Mainwindow'
 
   FIXME:
 
-  Saving doesn't actually save the array
+  ✔ Saving doesn't actually save the array
 
       
 */

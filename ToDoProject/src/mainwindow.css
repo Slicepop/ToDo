@@ -2,6 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
+
 .mainwindow {
   outline-style: solid;
   margin: 50px 5vw 50px 5vw;
@@ -12,12 +13,26 @@
   outline-color: #87ad88ab;
   overflow-y: hidden;
 }
+
+.header {
+  position: absolute;
+  top: 0;
+  margin-top: -10px;
+  margin-left: 100px;
+  color: rgba(102, 52, 94, 0.411);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
   max-height: 10px;
   min-height: 1px;
 }
+
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px #2be5f200;
@@ -29,6 +44,7 @@
   background: #f2bacf;
   border-radius: 100px;
 }
+
 .app {
   margin-top: -5px;
   padding: 10px;

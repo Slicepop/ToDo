@@ -1,6 +1,7 @@
 h2 {
   font-family: "Poppins", sans-serif;
 }
+
 .leftwindow {
   z-index: 2;
   position: absolute;
@@ -15,16 +16,24 @@ h2 {
   top: 0;
   transition: left 1s;
 }
+
 .leftwindow:hover {
   left: 0;
+}
+
+#project {
+  margin-top: 10px;
 }
 
 .leftwindow li {
   list-style: none;
 }
+
 .dates {
+  margin-top: 10px;
   color: #757575;
 }
+
 .leftwindow .button {
   display: flex;
   justify-content: center;
@@ -42,6 +51,7 @@ h2 {
   cursor: pointer;
   font-size: 20px;
 }
+
 .leftwindow textarea {
   background-color: whitesmoke;
   width: 250px;
@@ -63,6 +73,7 @@ h2 {
   top: 0;
   transition: right 1s;
 }
+
 .rightwindow:hover {
   right: 0;
 }
@@ -70,6 +81,7 @@ h2 {
 .search {
   display: flex;
 }
+
 .search img {
   cursor: pointer;
   width: 25px;
