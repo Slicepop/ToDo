@@ -55,7 +55,7 @@ export default function Popup(props) {
     // TODO: Project needs to be a drop down but for now it is just text
 
     return (
-        <Draggable allowAnyClick={true} handle='.banner' cancel='.popupTitle' defaultClassName='draggable'>
+        <Draggable allowAnyClick={true} handle='.banner' cancel={'.popupTitle, .editIcon, .closeIcon'} defaultClassName='draggable'>
 
             <div className='popup' id='popup' >
                 <div style={{ backgroundColor: isEdit ? '#bad7f2' : '#baf2d8' }} className='window'>

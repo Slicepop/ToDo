@@ -18,6 +18,9 @@ export default function Sidebar(props) {
 
 
     function addtask() {
+        props.setNumberOfTasks(prevState => prevState = prevState + 1)
+        var testtt = props.numberOfTasks
+
         if (title !== '') {
             // If the title has a name then clear the options to default
             setTitle('')
@@ -28,7 +31,7 @@ export default function Sidebar(props) {
             props.setTaskCount(prevState => prevState + 1)
             props.setThings(prevState => [...prevState,
             {
-                'id': props.taskCount,
+                'id': (testtt),
                 'title': title,
                 'description': desc,
                 'project': project,

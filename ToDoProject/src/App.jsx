@@ -5,10 +5,10 @@ import Mainwindow from '/src/Mainwindow'
 /*
   TODO:
 
-    Add checkmark to delete task when complete 
-      Ask with a popup "Are you sure you want to finish this task?"
+    ✔ Add checkmark to delete task when complete 
+        Ask with a popup "Are you sure you want to finish this task?"
 
-    Add project and priority options on the add task sidebar 
+✔  Add project and priority options on the add task sidebar  
 ✔  Maybe add a <p> at the bottom left that specifies if the popup is in    edit mode  
     
     Filter capabilities:
@@ -23,7 +23,9 @@ import Mainwindow from '/src/Mainwindow'
 
   FIXME:
 
-  ✔ Saving doesn't actually save the array
+  [✔] Saving doesn't actually save the array
+  [✔] mobile doesn't allow onClick:
+        Stack overflow says just add the buttons to the cancel attribute  
 
       
 */

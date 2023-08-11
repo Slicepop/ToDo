@@ -5,10 +5,14 @@ import Sidebar from './Sidebar'
 import Filter from './Filter'
 
 export default function Mainwindow() {
+    if (localStorage.getItem('Count') === null) {
+        localStorage.setItem('Count', 1)
+    }
+    const [numberOfTasks, setNumberOfTasks] = useState(parseInt(localStorage.getItem('Count')))
     var Tasks = [
         {
             //default sample task
-            id: 0,
+            id: numberOfTasks - 1,
             title: "Sample Title",
             description: "Click on me to open up a window to edit!",
             project: "Sample",
@@ -21,6 +25,7 @@ export default function Mainwindow() {
     if (localStorage.getItem('Tasks') === null) {
         localStorage.setItem('Tasks', JSON.stringify(Tasks))
     }
+
     // This is where I set the local storage data to the state
     var test = JSON.parse(localStorage.getItem('Tasks'))
     const [things, setThings] = useState(test)
@@ -29,6 +34,7 @@ export default function Mainwindow() {
     addEventListener("pagehide", (event) => { });
     onpagehide = (event) => {
         localStorage.setItem('Tasks', JSON.stringify(things))
+        localStorage.setItem('Count', numberOfTasks)
     };
 
 
@@ -36,6 +42,7 @@ export default function Mainwindow() {
     const [taskCount, setTaskCount] = useState(things.length)
     var list = things.map(item => {
         return (<Task
+            onClick={console.log(things)}
             key={item.id}
             task={item}
             things={things}
@@ -44,7 +51,7 @@ export default function Mainwindow() {
     })
     return (
         <>
-            <Sidebar taskCount={taskCount} setTaskCount={setTaskCount} things={things} setThings={setThings} />
+            <Sidebar numberOfTasks={numberOfTasks} setNumberOfTasks={setNumberOfTasks} taskCount={taskCount} setTaskCount={setTaskCount} things={things} setThings={setThings} />
             <h1 className='header'>TaskMe</h1>
             <div className='mainwindow' id='mainwindow' >
                 <div className="app">
