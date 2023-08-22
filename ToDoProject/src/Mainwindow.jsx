@@ -40,9 +40,10 @@ export default function Mainwindow() {
 
     // This taskCount state is used to add id to each task so there is a key
     const [taskCount, setTaskCount] = useState(things.length)
+
+
     var list = things.map(item => {
         return (<Task
-            onClick={console.log(things)}
             key={item.id}
             task={item}
             things={things}
@@ -52,6 +53,7 @@ export default function Mainwindow() {
     return (
         <>
             <Sidebar numberOfTasks={numberOfTasks} setNumberOfTasks={setNumberOfTasks} taskCount={taskCount} setTaskCount={setTaskCount} things={things} setThings={setThings} />
+            <Filter things={things} setThings={setThings} />
             <h1 className='header'>TaskMe</h1>
             <div className='mainwindow' id='mainwindow' >
                 <div className="app">

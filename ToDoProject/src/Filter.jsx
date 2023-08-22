@@ -2,29 +2,24 @@ import { useState } from 'react'
 import './sidebar.css'
 export default function Filter(props) {
     const [searchTerm, setSearchTerm] = useState('')
-    function handleOnClick() {
-        //var filteredArray = data.filter((item) => item[filter] === keyword);
+    function handleOnChange(evt) {
+        setSearchTerm(evt.target.value)
+        props.setThings(prevState => prevState.filter(item => {
+            if (item.title == searchTerm) {
+                return item
+            }
+            return 0
+        }))
 
-
-        // props.setThings(prevState => prevState.filter(term => term[filter] === (searchTerm)))
-
-        // props.things.map(item => {
-        //     if (item.title.includes(searchTerm, 0)) {
-        //         props.setThings(prevThings => [item])
-        //         console.log(props.things)
-
-        //     } else {
-        //     }
-
-
-        // })
     }
+
+
     return (
-        <div className='rightwindow' onMouseEnter={props.onMouseEnter}>
+        <div className='rightwindow' >
             <div className="search">
-                <input type="text" name="" id="searchKey" value={searchTerm} onChange={evt => setSearchTerm(evt.target.value)} />
-                <img src="./search.png" alt="search" onClick={handleOnClick}
-                />
+                <input type="text" name="" id="searchKey" value={searchTerm} onChange={evt => handleOnChange(evt)} />
+                {/* will need to array.filter(searchTerm) will update as it is typed */}
+
             </div>
             <select defaultValue={'Priority'} name="priority" id="" ></select>
             <select defaultValue={'Priority'} name="project" id="" ></select>

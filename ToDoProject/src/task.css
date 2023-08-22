@@ -13,12 +13,14 @@
 
   box-shadow: 0px 1.982561px 7.4564px #c0627bb0;
 }
+
 .task:hover {
   box-shadow: 0px 2.982561px 10.4564px #c0627b;
   outline-color: #f2bac9af;
   background-color: #dececf;
   cursor: pointer;
 }
+
 .task #check {
   width: 20px;
   height: 20px;
@@ -29,6 +31,7 @@
   transition: 0.35s ease;
   outline-color: rgba(0, 0, 0, 0.178);
 }
+
 .task #check:hover {
   outline-color: rgba(0, 0, 0, 0.575);
   background-color: #f2bac9;
@@ -42,6 +45,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .title {
   margin-right: 10px;
   width: 15vw;
@@ -53,6 +57,7 @@
   margin-left: 10px;
   width: 15vw;
 }
+
 .date {
   margin-left: auto;
 }
@@ -61,9 +66,11 @@
   .priority {
     display: none;
   }
+
   .project {
     display: none;
   }
+
   .desc {
     margin-right: auto;
     margin-left: 10px;
