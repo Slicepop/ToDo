@@ -124,6 +124,14 @@
   margin-right: 35px;
 }
 
+.selectPriority {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 35px;
+  margin-bottom: 25px;
+}
+
 @media (max-width: 600px) {
   .window {
     height: 45vh;

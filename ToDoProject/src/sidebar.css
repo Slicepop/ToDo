@@ -74,6 +74,14 @@ h2 {
   transition: right 1s;
 }
 
+#project {
+  background-color: whitesmoke;
+}
+
+.dates {
+  background-color: whitesmoke;
+}
+
 .rightwindow:hover {
   right: 0;
 }

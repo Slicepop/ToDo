@@ -14,7 +14,7 @@ export default function Mainwindow() {
             //default sample task
             id: numberOfTasks - 1,
             title: "Sample Title",
-            description: "Click on me to open up a window to edit!",
+            description: "Click on me to open up this task! Press the edit icon in the top right to start editing",
             project: "Sample",
             priority: "High",
             date: "2023-07-28",

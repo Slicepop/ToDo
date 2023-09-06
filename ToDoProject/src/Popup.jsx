@@ -14,8 +14,8 @@ export default function Popup(props) {
     var title = props.item.title
     const [description, setDescription] = useState(props.item.description)
     var project = props.item.project
-    var priority = props.item.priority
     const [date, setDate] = useState(props.item.date)
+    const [priority, setPriority] = useState(props.item.priority)
 
 
 
@@ -114,7 +114,19 @@ export default function Popup(props) {
                     ></textarea>
 
                     <p className='window--mode'>{isEdit ? 'Edit Mode' : ''}</p>
-                    <p className='window--priority'>Priority: {props.item.priority}</p>
+                    {
+                        isEdit ?
+                            <select className='selectPriority' defaultValue={props.item.priority} name="" id="selectPriority"
+                                onChange={change => setPriority(change.target.value)}
+                            >
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+
+                            </select>
+                            :
+                            <p className='window--priority'>Priority: {props.item.priority}</p>
+                    }
                 </div>
             </div >
         </ Draggable >
